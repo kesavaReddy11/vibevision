@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style_f1.css">  <style>
+        footer {
+            height: 100px;
+            background-color: #181818;
+            color: #b3b3b3;
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 30px;
+        
+        }
+
+        .footer-links a:hover {
+            color: #1db954;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #82548b;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        #popup1 {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+        }
+        #overlay1 {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(3px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -55%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        
+    </style>
+</head>
+<header>
+    
+    <div id="h1">
+        <div id="logo1"></div>
+        <div id="logo2">𝕍𝓲𝓫𝓮𝕍𝒾𝓼𝒾𝑜𝓃</div>
+        <input id="logo3" type="text" placeholder="What do you want to play?">
+        <button id="logo03">search</button>
+
+        <div id="logo4">
+            <body class="container">
+                <button onclick="showPopup()">Contact us</button>
+                
+                <div id="overlay" onclick="hidePopup()"></div>
+                <div id="popup">
+                    <p>Email: batch6@gmail.com</br>
+
+                        Phone: +91-9999999999</br>
+                        
+                        Address: [vignan univercity,guntur]</p>
+                    <button onclick="hidePopup()">Close</button>
+                </div>
+    </div>
+
+        <div id="logo5">
+            <body class="container">
+                <button onclick="showPopup()">Help</button>
+                
+                <div id="overlay" onclick="hidePopup()"></div>
+                <div id="popup">
+                    <p>hello</p>
+                    <button onclick="hidePopup()">Close</button>
+                </div>
+    </div>
+        <a href="basic7.html"><div id="logo6">Login/Signup</div></a>
+
+    </div>
+</header>
+
+<body>
+    <div id="sidenav">
+        <div id="n1"><a href="myaccount.html" style="color: white;">&#128100;Account</a></div>
+        <div id="n2">&#x1F3E0;home</div>
+        <div id="n3"><a href="shorts.html" style="color: white;">&#x1F45C;shorts</a></div>
+        <div id="n5">&#10066; Library</div>
+        <div id="n6">&#9733;Subscription</div>
+        <div id="n7">&#9762;History</div>
+        <div id="n8">Settings</div>
+        <div id="n9">Liked videos</div>
+        <div id="n10">Repot history</div>
+        <div id="n11">Send feedback</div>
+        <div id="n12">Send feedback</div>
+        <div id="n13">k</div>
+    </div>
+    <div id="topnav2">
+        <div id="nav2">
+            <a><div>Trending Songs </div></a>
+            <div> New Songs</div>
+           <a href="audio.html"><div> Old Songs</div></a>
+            <a href="k100.html"><div>video songs</div></a>
+            <div> Album</div>
+            <div> Top Artist</div>
+            <div>Podcast</div>
+            <a href="v_to_t.html"><div>vioce to text converter</div></a>
+           <a href="k1.html"> <div>Text to voice converter</div></a>
+            <a href="ani1.html"> <div>live Radio</div></a>
+           <a href="aniv1.html" ><div>live Videos</div></a>
+        </div>
+    </div>
+    <div id="body1">
+        <div id="body01">
+            <a href="love_songs.html" id="body02"
+                style=" background-image:url(./main_page_img/love_song_bg.png);background-size: cover;"></a>
+            <a href="./mellow.html" id="body02"
+                style=" background-image:url(./main_page_img/melody_bg.jpg);background-size: cover;"></a>
+            <a href="./romantic_songs.html" id="body02"
+                style=" background-image:url(./main_page_img/romantic.jpg);background-size: cover;"></a>
+            <a href="./sad_songs.html" id="body02" style=" background-image:url(./main_page_img/sad.jpg);background-size: cover;"></a>
+            <a href="./folk_songs.html" id="body02" style=" background-image:url(./main_page_img/folk.jpg);background-size: cover;"></a>
+            <a href="./god_songs.html" id="body02" style=" background-image:url(./main_page_img/god.jpg);background-size: cover;"></a>
+        </div>
+
+        <div id="body2"
+            style="color: rgb(255, 255, 255); font-size: 25px;font-style: italic;padding-left: 50px; background-color: rgb(76, 79, 86);">
+            Hit Songs Of Telugu Heros</div>
+        <div id="body3">
+            <a  href="allu_arjun.html" id="body03" style=" background-image:url(./main_page_img/allu_argun.jpg);background-size: cover;"></a>
+            <a href="ntr_songs.html"id="body03" style=" background-image:url(./main_page_img/ntr1.jpg);background-size: cover;"></a>
+            <a href="prabhas_songs.html"id="body03" style=" background-image:url(./main_page_img/prabhas.jpg);background-size: contain;"></a>
+            <a href="pk.html" id="body03" style=" background-image:url(./main_page_img/powen_kalyan.jpg);background-size: cover;"></a>
+            <a href="mahesh.html" id="body03" style=" background-image:url(./main_page_img/mahesh.jpg);background-size: cover;"></a>
+        </div>
+            <div id="body2"
+            style="color: rgb(255, 255, 255); font-size: 25px;font-style: italic;padding-left: 50px; background-color: rgb(76, 79, 86);">
+            Popular artists</div>
+            <div id="body3">
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/dsp.jpg);background-size: cover;"></a>
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/anirudh.jpg);background-size: cover;"></a>
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/thaman.jpg);background-size: contain;"></a>
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/sp.jpg);background-size: cover;"></a>
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/ar\ rehaman.jpg);background-size: cover;"></a>
+                <a href="error.html" id="body04" style=" background-image:url(./main_page_img/mahesh.jpg);background-size: cover;"></a>
+            </div>
+            <footer>
+                <div class="footer-links">
+                    <a href="#">About</a>
+                    <a href="#">Jobs</a>
+                    <a href="#">For the Record</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+                <p>&copy; 2025 VibeVision. All rights reserved.</p>
+            </footer>
+    </div>
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+
+        }
+    </script>
+</body>
+
+</html>
+style="height: 30px;width: 90px;border-radius: 10px;"

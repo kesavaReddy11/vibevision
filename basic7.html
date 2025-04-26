@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stylep7.css">
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            let email = document.getElementById("in1").value;
+            let password = document.getElementById("in2").value;
+            
+            if (email === "" || password === "") {
+                alert("Please enter both email and password.");
+                return;
+            }
+            
+            // Simulate login check (replace with actual authentication logic)
+            if (email === "batch6@gmail.com" && password === "12345678") {
+                alert("Login successful!");
+                window.location.href = "main1.html"; // Redirect on success
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
+</head>
+<header>
+    <div id="back1"></div>
+    <div id="nav">Vibe Vision</div>
+</header>
+<body>
+    <div id="back"></div>
+    <div id="login">
+        <h1 id="h">Login</h1>
+        <p id="mail">Email:</p>
+        <input id="in1" type="text"><br><br>
+        <p id="pass">Password:</p>
+        <input id="in2" type="password"><br>
+        <button id="submit" onclick="validateLogin(event)">Login</button>
+        <p id="k1">Forgot <a href="#">Password?</a></p>
+        <p id="k2">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+    <footer style="background-color: #181818; color: #b3b3b3; text-align: center; padding: 20px; font-size: 14px; position: fixed; bottom: 0; width: 100%;">
+        <div>
+            <a href="#" style="color: #b3b3b3; text-decoration: none; margin: 0 15px;">Privacy Policy</a>
+            <a href="#" style="color: #b3b3b3; text-decoration: none; margin: 0 15px;">Terms of Service</a>
+            <a href="#" style="color: #b3b3b3; text-decoration: none; margin: 0 15px;">About</a>
+            <a href="#" style="color: #b3b3b3; text-decoration: none; margin: 0 15px;">Contact</a>
+        </div>
+        <p style="margin-top: 10px;">© 2025 VibeVision. All rights reserved.</p>
+    </footer>
+</body>
+</html>
