@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Audio Player</title>
+</head>
+<body>
+  <h1>YouTube Audio Player</h1>
+  <input type="text" id="videoId" placeholder="Enter YouTube Video ID">
+  <button onclick="playAudio()">Play</button>
+  <br><br>
+  <audio id="audioPlayer" controls></audio>
+
+  <script>
+    function playAudio() {
+      const videoId = document.getElementById('videoId').value;
+      const audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.src = `http://localhost:3000/audio?id=${videoId}`;
+      audioPlayer.play();
+    }
+  </script>
+</body>
+</html>

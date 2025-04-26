@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Play on Image Click</title>
+    <style>
+        /* Header Styling */
+        header {
+            height: 100px;
+            background-color: #8a42b8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-color: #cea6e6;
+            border-style: solid;
+            border-width: 10px;
+        }
+
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 120px; /* Ensure content starts below the header */
+        }
+
+        /* Video Container */
+        #videoContainer {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+    
+
+        /* Thumbnail Styling */
+        .video-thumbnail {
+            cursor: pointer;
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.1);
+        }
+        #kes{
+            height: 50px;
+            border-radius: 15px;
+        }
+        #Home{
+            position: relative;
+            left:-500px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 30PX;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a id="Home" href="main1.html">&#x1F3E0;Home</a>
+    <img id="kes" src="ligo3.jpg">
+    𝕍𝓲𝓫𝓮𝕍𝒾𝓼𝒾𝑜𝓃
+</header>
+
+<!-- Video Player Container -->
+<div id="videoContainer">
+    <video id="videoPlayer" controls>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Video Thumbnails -->
+<div>
+    <img src="./prabhas_img/ammarpet.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Daripontothundu_Folk_Song_Studio_Version_Promo___Madeen_Sk___Mamidi_Mounika___Tree_Music.mp4')">
+    <img src="./prabhas_img/adavi ramudu.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./folk/Daripontothundu_Full_Song___Madeen_Sk___Mamidi_Mounika___Tree_Music___Subbi_Subbadu.mp4')">
+    <img src="./prabhas_img/bhahubali.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Full_Video__Nallanchu_Thellacheera___Mr_Bachchan__Ravi_Teja,_Bhagyashri___Mickey_J_Meyer___Harish_S.mp4')">
+    <img src="./prabhas_img/darling.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Gurijala_Guttamidha_Full_Song___Kalanjali_Prardini_Jabardasth___Latest_Folk_Songs___Relare_Ganga.mp4')">
+    <img src="./prabhas_img/darling2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/GUTTAKINDHA_GUMPUCHETTLANINDA_FULL_SONG_4K____NUKARAJU___ASIYA_LATEST_SONG____LATEST_FOLK_SONG_2024.mp4')">
+    <img src="./prabhas_img/darlilng3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/MA_GALLILO_OKKADU_PORADU_FULL_SONG_TELUGU_FOLK_SONG_2022_#JOGULAVENKATES_#MOUNIKAYADAV_#DHARANINAIDU.mp4')">
+    <img src="./prabhas_img/ee_rathaley.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/MAHENDRA_TRACTOR_NADHE_FULL_SONG__SREEYADEEP__VENKAT_AJMEERA__VILLAGE_FOLK_SONGS__SHIVANI_FOLKS.mp4')">
+    <img src="./prabhas_img/radhey sham.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Field_project1/folk/O_Pilaga_Venkati_Full_Song___Singer_Prabha___Pooja_Nageshwar___Bhavya_Tunes.MP4.mp4')">
+    <img src="./prabhas_img/radhey sham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/PANNENDU_VANDHALE_RAJIREDDY___FOLK_DJ_SONG___FULL_SONG___SVMALLIKTEJA___JANULYRI___PRABHA___MVMUSIC.mp4')">
+    <img src="./prabhas_img/varsham1.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./folk/RADHAMMA_FULL_SONG___FOLK_SONG___ANIL_GEELA___SAHASRA___VENKAT_AJMEERA___BABAI_MUSIC.mp4')">
+    <img src="./prabhas_img/mirchi1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/RANU_BOMBAI_KI_RANU_FULL_SONG___RAMU_RATHOD___LIKHITHA___KALYAN_KEYS___PRABHA___RATHOD_TUNES.mp4')">
+    <img src="./prabhas_img/mirchi2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Salupu_full_song_4K____Pulser_bike_singer_Ramana____Ramya_Rithik_master____Telugu_latest_folk_song.mp4')">
+    <img src="./prabhas_img/varsham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/SUKKA_THEERU_FULL_SONG__-___RAMU_RATHOD,_BRAMARAMBIKA_TUTIKA___KALYAN_KEYS___RAJ_LOHITH___AYRA.mp4')">
+    <img src="./prabhas_img/bhahubali2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/SUPER_HIT_Village_Folk_Songs___Gunna_Gunna_Mavilalla_FULL_Song___Telangana_Patalu___Amulya_DJ_Songs.mp4')">
+    <img src="./prabhas_img/rebal.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Swathi_Reddy_Lyric_Video___Mad_Square___Kalyan_Shankar___Bheems_Ceciroleo___Reba_Monica_John.mp4')">
+    <img src="./prabhas_img/sa.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/UDUKUDUKU_ROTTELU___FULL_SONG____LATEST_TELUGU_FOLK_SONG__JOGULA_VENKATESH___SINGER_LAVANYA.mp4')">
+    <img src="./prabhas_img/bhahubali3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/UDUKUDUKU_ROTTELU_FULL_SONG____LATEST_DJ_SONG__JOGULA_VENKATESH___SINGER_LAVANYA___FOLK_SONGS.mp4')">
+    <img src="./prabhas_img/kalki.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Field_project1/folk/UNGARAMA_MUDDU_TUNGARAMA_FULL_SONG____PART_03____TELUGU_FOLK_SONG____LUCKY_HEMA____DURGAM_MUSIC.MP4.mp4')">
+    <img src="./prabhas_img/kalki.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./folk/Yerra_Yerrani_Rumalu_Gatti_Dj_Full_Song___2025_Latest_Folk_Song___Naga_Durga___Konda_Vlogs.mp4')">c
+
+</div>
+
+<!-- JavaScript to handle video playback -->
+<script>
+function playVideo(videoFile) {
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Clear existing sources
+    videoPlayer.innerHTML = '';
+
+    // Create a new source element
+    const source = document.createElement('source');
+    source.src = videoFile;
+    source.type = 'video/mp4';
+    videoPlayer.appendChild(source);
+
+    // Load and play video
+    videoPlayer.load();
+    videoPlayer.play().catch(error => {
+        console.error("Autoplay failed: ", error);
+        alert("Click the play button to start the video.");
+    });
+
+    // Show video container
+    videoContainer.style.display = 'block';
+
+    // Scroll smoothly to the video container, just below the header
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const videoPosition = videoContainer.offsetTop - headerHeight;
+    window.scrollTo({ top: videoPosition, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

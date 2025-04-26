@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Play on Image Click</title>
+    <style>
+        /* Header Styling */
+        header {
+            height: 100px;
+            background-color: #8a42b8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-color: #cea6e6;
+            border-style: solid;
+            border-width: 10px;
+        }
+
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 120px; /* Ensure content starts below the header */
+        }
+
+        /* Video Container */
+        #videoContainer {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+    
+
+        /* Thumbnail Styling */
+        .video-thumbnail {
+            cursor: pointer;
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.1);
+        }
+        #kes{
+            height: 50px;
+            border-radius: 15px;
+        }
+        #Home{
+            position: relative;
+            left:-500px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 30PX;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a id="Home" href="main1.html">&#x1F3E0;Home</a>
+    <img id="kes" src="ligo3.jpg">
+    𝕍𝓲𝓫𝓮𝕍𝒾𝓼𝒾𝑜𝓃
+</header>
+
+<!-- Video Player Container -->
+<div id="videoContainer">
+    <video id="videoPlayer" controls>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Video Thumbnails -->
+<div>
+    <img src="./prabhas_img/ammarpet.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Aaraduguluntada_Full_Video_Song____SVSC_Movie____Venkatesh,_Mahesh_Babu,_Samantha,_Anjali(720p).mp4')">
+    <img src="./prabhas_img/adavi ramudu.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Anaganaga_Oka_Uru_Video_Song____Hello_Video_Songs____Akhil_Akkineni,_Kalyani_Priyadarshan(1080p).mp4')">
+    <img src="./prabhas_img/bhahubali.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Anaganaga_Oka_Uru_Video_Song____Hello_Video_Songs____Akhil_Akkineni,_Kalyani_Priyadarshan(1080p).mp4')">
+    <img src="./prabhas_img/darling.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Choosi_Chudangane_Lyrical____Chalo_Movie_Songs____Naga_Shaurya,_Rashmika_Mandanna____Sagar(1080p).mp4')">
+    <img src="./prabhas_img/darling2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Crazy_Feeling_Full_Video_Song___Nenu_Sailaja_Movie___Ram_Pothineni___Keerthy_Suresh__Devi_Sri_Prasad(1080p).mp4')">
+    <img src="./prabhas_img/darlilng3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Gaali_Vaaluga_Lyrical__Agnyaathavaasi_Songs_Pawan_Kalyan,Keerthy_Suresh__Anirudh___Telugu_Love_Songs(1080p).mp4')">
+    <img src="./prabhas_img/ee_rathaley.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Inkem_Inkem_Full_Video_Song___Geetha_Govindam___Vijay_Deverakonda,_Rashmika,_Gopi_Sunder(1080p).mp4')">
+    <img src="./prabhas_img/radhey sham.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Janatha_Garage_Songs___Nee_Selavadigi_Lyrical_Video_Song___Jr_NTR___Samantha___Nithya_Menen___DSP(1080p).mp4')">
+    <img src="./prabhas_img/radhey sham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Jatha_Kalise___Full_Video_Song___Srimanthudu_Movie___Mahesh_Babu___Shruti_Haasan___DSP(1080p).mp4')">
+    <img src="./prabhas_img/varsham1.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Kotha_Bangaru_Lokam_Telugu_Movie___Nenani_Neevani_Video_Song___Varun___Swetha(720p).mp4')">
+    <img src="./prabhas_img/mirchi1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Maate_Vinadhuga_Lyrical____Taxiwaala_Songs____Vijay_Deverakonda,_Priyanka_jawalkar____Sid_Sriram(1080p).mp4')">
+    <img src="./prabhas_img/mirchi2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Mirchi_Songs___Idedo_Bagundi_Video_Song___Latest_Telugu_Songs___Prabhas,_Anushka_@SriBalajiMovies(1080p).mp4')">
+    <img src="./prabhas_img/varsham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Neeli_Neeli_Aakasam_Full_Video_Song_-_30_Rojullo_Preminchadam_Ela___Pradeep_Machiraju___Sid_Sriram(1080p).mp4')">
+    <img src="./prabhas_img/bhahubali2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Nuvvostanante_Nenoddantana_Video_Songs___Chandrulo_Unde_Video_Song___Siddharth(720p).mp4')">
+    <img src="./prabhas_img/rebal.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Padi_Padi_Leche_Manasu_Title_Video_Song___Sharwanand,_Sai_Pallavi___Vishal_Chandrasekhar(1080p).mp4')">
+    <img src="./prabhas_img/sa.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Raju_Bhai_Movie____Evvare_Nuvvu_Video_Song____Manchu_Manoj,_Sheela____Shalimarcinema(720p).mp4')">
+    <img src="./prabhas_img/bhahubali3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Ramayya_Vasthavayya_Movie____Neneppudaina_Full_Video_Songs____HD____Jr.NTR,Samantha,Shruti_Haasan(1080p).mp4')">
+    <img src="./prabhas_img/kalki.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Rangasthalam_Video_Songs___Yentha_Sakkagunnave_Full_Video_Song___Ram_Charan,_Samantha(1080p).mp4')">
+    <img src="./prabhas_img/sa.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Seethakaalam__Full_VideoSong__S_o_Satyamurthy__Allu_Arjun,_DSP___Allu_Arjun_DSP__Hits___Aditya_Music(1080p).mp4')">
+    <img src="./prabhas_img/bhahubali3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Ye_Kannulu_Choodani_With_Telugu_Lyrics___Ardhashathabdam_Songs___Karthik_Rathnam__Maa_Paata_Mee_Nota(1080p).mp4')">
+    <img src="./prabhas_img/kalki.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./mellow_telugu/Yenti_Yenti_Full_Video_Song___Geetha_Govindam___Vijay_Deverakonda,_Rashmika_Mandanna,_Gopi_Sunder(1080p).mp4')">
+
+</div>
+
+<!-- JavaScript to handle video playback -->
+<script>
+function playVideo(videoFile) {
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Clear existing sources
+    videoPlayer.innerHTML = '';
+
+    // Create a new source element
+    const source = document.createElement('source');
+    source.src = videoFile;
+    source.type = 'video/mp4';
+    videoPlayer.appendChild(source);
+
+    // Load and play video
+    videoPlayer.load();
+    videoPlayer.play().catch(error => {
+        console.error("Autoplay failed: ", error);
+        alert("Click the play button to start the video.");
+    });
+
+    // Show video container
+    videoContainer.style.display = 'block';
+
+    // Scroll smoothly to the video container, just below the header
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const videoPosition = videoContainer.offsetTop - headerHeight;
+    window.scrollTo({ top: videoPosition, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

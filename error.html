@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Not Found</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global resets and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(45deg, #ff0044, #00c6ff, #ff6a00);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Error container */
+        .error-container {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 40px 60px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            transform: scale(0.95);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 120px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 8px;
+            font-family: 'Roboto', sans-serif;
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            0% { text-shadow: 0 0 10px #ff0044, 0 0 20px #ff0044, 0 0 30px #ff0044; }
+            100% { text-shadow: 0 0 20px #00c6ff, 0 0 30px #00c6ff, 0 0 40px #00c6ff; }
+        }
+
+        /* Paragraph styling */
+        p {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 30px;
+            font-weight: 400;
+            opacity: 0;
+            animation: fadeInText 1s 1s forwards;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Button styling */
+        button {
+            padding: 12px 30px;
+            background-color: #ff0044;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(255, 0, 68, 0.5);
+            animation: scaleUp 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes scaleUp {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        button:hover {
+            background-color: #ff8c8c;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 0, 68, 0.5);
+        }
+
+        button:active {
+            background-color: #e04d4d;
+            transform: scale(1);
+        }
+
+        /* Particle animation background */
+        @keyframes particles {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            pointer-events: none;
+            animation: particles 1.5s infinite ease-in-out;
+            will-change: transform, opacity;
+        }
+
+        @media (max-width: 600px) {
+            .error-container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 90px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <p>Oops! The page you’re looking for doesn’t exist.</p>
+        <button id="back-home">Go Back Home</button>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Particle Effect
+            const body = document.querySelector("body");
+            const numParticles = 50;
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement("div");
+                particle.classList.add("particle");
+                body.appendChild(particle);
+
+                // Fix: Use backticks (``) for template literals
+                particle.style.left = `${Math.random() * 100}vw`;
+                particle.style.top = `${Math.random() * 100}vh`;
+                particle.style.width = `${Math.random() * 10 + 5}px`;
+                particle.style.height = `${Math.random() * 10 + 5}px`;
+                particle.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                particle.style.animationDelay = `${Math.random() * 2}s`;
+            }
+
+            // Go back button functionality
+            document.getElementById('back-home').addEventListener('click', function() {
+                window.location.href = 'main1.html'; // Replace with your homepage URL
+            });
+        });
+    </script>
+</body>
+</html>

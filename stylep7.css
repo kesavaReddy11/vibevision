@@ -1,0 +1,113 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    height:100px;
+    width: 100%;
+    display: inline-block;
+    
+}
+#nav{
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    color: #A9B5DF;
+    font-size: 50px;
+    position: relative;
+    bottom: 10px;
+    font-family: Segoe Print;
+    
+}
+#back{
+    height: 800px;
+    background-image: url(back_music.jpg);
+    background-size:cover;
+    position: relative;
+    top: -100px;
+    z-index: -1;
+
+    
+}
+#back1{
+    height: 30px;
+    width: 50px;
+    /*border-style:solid*/
+    background-image:url(ligo3.jpg);
+    background-size: cover;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+}
+#login{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    top: -750px;
+    left:300px;
+    border-style: solid;
+    border-color: antiquewhite;
+    border-radius: 25px;
+}
+#h{
+    height: 50PX;
+    color:#e0e8f2;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    background-color: #2D336B;
+    border-radius: 20px 20px 0px 0px;
+}
+#submit{
+    height: 30px;
+    width: 300px;
+    border-style: solid;
+    border-color: #FFDFEF;
+    color: #ad09146d;
+    margin-left: 50px;
+    margin-top: 30px;
+    border-radius: 25px;
+    font-weight: 900;
+}
+#mail{
+    color:#e0e8f2;
+    font-size: 20px;
+    margin-left: 60px;
+}
+#pass{
+    color:#e0e8f2;
+    font-size: 20px;
+    margin-left: 60px;
+} 
+#in1{
+   margin-left: 50px;  
+   width: 300px;
+   height: 30px;
+   border-radius: 20px;
+}
+#in2{
+    margin-left: 50px;
+    width: 300px;
+    height: 30px;
+    border-radius: 20px;
+}
+#k1{
+    text-align: center;
+    margin-top: 40px;
+    color: rgb(244, 229, 229);
+}
+#k2{
+    text-align: center;
+    color: rgb(244, 229, 229);
+}
+#submit:hover{
+    background-color: rgb(65, 27, 181);
+    color: beige;
+    transform: scaleX(0.8);
+    transition: ease-in;
+}
+

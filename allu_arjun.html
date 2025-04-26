@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Play on Image Click</title>
+    <style>
+        /* Header Styling */
+        header {
+            height: 100px;
+            background-color: #8a42b8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-color: #cea6e6;
+            border-style: solid;
+            border-width: 10px;
+        }
+
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 120px; /* Ensure content starts below the header */
+        }
+
+        /* Video Container */
+        #videoContainer {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+    
+
+        /* Thumbnail Styling */
+        .video-thumbnail {
+            cursor: pointer;
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.1);
+        }
+        #kes{
+            height: 50px;
+            border-radius: 15px;
+        }
+        #Home{
+            position: relative;
+            left:-500px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 30PX;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a id="Home" href="main1.html">&#x1F3E0;Home</a>
+    <img id="kes" src="ligo3.jpg">
+    𝕍𝓲𝓫𝓮𝕍𝒾𝓼𝒾𝑜𝓃
+</header>
+
+<!-- Video Player Container -->
+<div id="videoContainer">
+    <video id="videoPlayer" controls>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Video Thumbnails -->
+<div>
+    <img src="./allu_img/arraya1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Aa_Ante_Amalapuram_Full_Video_Song____Aarya_Video_Songs____Allu_Arjun,_Anuradha_Mehta(0).mp4')">
+    <img src="./allu_img/baby1.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./allu_arjun/Aarya-2_-_Baby_He_Loves_You_Video___Allu_Arjun___Devi_Sri_Prasad(0).mp4')">
+    <img src="./allu_img/arraya2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Aarya-2_-_Karige_Loga_Video___Allu_Arjun___Devi_Sri_Prasad(0).mp4')">
+    <img src="./allu_img/arraya3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Aarya-2_-_My_Love_Is_Gone_Video___Allu_Arjun___Devi_Sri_Prasad(0).mp4')">
+    <img src="./allu_img/athiloka.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Athiloka_Sundari_Full_Video_Song_____Sarrainodu_____Allu_Arjun,_Rakul_Preet____Telugu_Songs_2016(0).mp4')">
+    <img src="./allu_img/ala.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/ButtaBomma_Video_Song__4K___Telugu____#AlaVaikunthapurramuloo___Allu_Arjun___Thaman_S___Armaan_Malik(1080p).mp4')">
+    <img src="./allu_img/race.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Cinema_Choopistha_Mava_Full_Video_Song___Race_Gurram_Movie_Songs___Allu_Arjun___Shruti_Haasan(0).mp4')">
+    <img src="./allu_img/come.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Come_to_the_Party_Full_Song___S_O_Satyamurthy_Full_Video_Song_-_Allu_Arjun,_Upendra,_Sneha(0).mp4')">
+    <img src="./allu_img/come.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Come_To_The_Party_Full_Video_Song___S_O_Satyamurthy___Allu_Arjun,_Samantha___DSP___Trivikram(0).mp4')">
+    <img src="./allu_img/down.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./allu_arjun/Down_Down_Video_Song_Race_Gurram_Video_Songs___Allu_Arjun,_Shruti_hassan_S.S_Thaman(0).mp4')">
+    <img src="./allu_img/pushpa1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjunFull_Video__Gango_Renuka_Thalli__Jathara____Pushpa_2_The_Rule___Allu_Arjun___Rashmika___Sukumar__DSP(1080p).mp4')">
+    <img src="./allu_img/kissik.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Full_Video__KISSIK_Song___Pushpa_2_The_Rule___Allu_Arjun___Sukumar___Sreeleela___DSP(1080p).mp4')">
+    <img src="./allu_img/pushpa2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Full_Video__PEELINGS_పీలింగ్స్_ఫుల్_వీడియో___Pushpa_2_The_Rule___Allu_Arjun,Rashmika___DSP(1080p).mp4')">
+    <img src="./allu_img/pushpa3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Full_Video__SOOSEKI___Pushpa_2_The_Rule___Allu_Arjun___Rashmika___Shreya_Ghoshal___Sukumar__DSP(1080p).mp4')">
+    <img src="./allu_img/run.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Iddarammayilatho_Songs___Run_Run_Video_Song___Latest_Telugu_Video_Songs___Allu_Arjun(0).mp4')">
+    <img src="./allu_img/top.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Iddarammayilatho_Songs___Top_Lechipoddi_Video_Song___Latest_Telugu_Video_Songs___Allu_Arjun(0).mp4.mp4')">
+    <img src="./allu_img/id.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Iddarammayilatho_Songs___Violin_Song__Girl_Just__Video_Song___Latest_Telugu_Video_Songs___Allu_Arjun(0).mp4')">
+    <img src="./allu_img/" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Iddarammayilatho_Video_Songs___Run_Run_Video_Song___Allu_Arjun,_Amala_Paul,_Catherine(0).mp4')">------------
+    <img src="./allu_img/top.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjunIddarammayilatho_Video_Songs___Top_Lesi_Poddi_Video_Song_Allu_Arjun,_Catherine___Sri_Balaji_Video(1080p).mp4')">
+    <img src=".//allu_img/" alt="Video 2" class="video-thumbnail" onclick="playVideo('./allu_arjun/Jaaruko_Full_Song___S_O_Satyamurthy_Full_Video_Song_-_Allu_Arjun,_Upendra,_Sneha(0).mp4')">
+    <img src="./prabhas_img/bhahubali.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Mecchuko_Full_VideoSong__DJ_Duvvada_Jagannadham____Allu_Arjun___Aditya_Music___Telugu_Dance_Songs(0).mp4')">
+    <img src="./prabhas_img/darling.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/PRIVATE_PARTY_Full_Video_Song_____Sarrainodu_____Allu_Arjun,_Rakul_Preet____Telugu_Songs_2016(0).mp4')">
+    <img src="./prabhas_img/darling2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Race_Gurram_ᴴᴰ_Video_Songs___Sweety_Song___Allu_Arjun___Shruti_Haasan___Saloni___Prakash_Raj(0).mp4')">
+    <img src="./prabhas_img/darlilng3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Race_Gurram_Video_Songs___Down_Down_Full_Video_Song___Allu_Arjun,_Shruti_hassan,_S.S_Thaman(0).mp4')">
+    <img src="./prabhas_img/ee_rathaley.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Race_Gurram_Video_Songs___Sweety_Full_Song___Allu_Arjun___Shruti_Haasan___S_Thaman(0).mp4')">
+    <img src="./prabhas_img/radhey sham.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Samajavaragamana_Video_Song__4K___Telugu____AlaVaikunthapurramuloo___Allu_Arjun___Trivikram___Thaman(1080p).mp4')">
+    <img src="./prabhas_img/radhey sham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Sarrainodu_Title_Song_Full_Video_Song____Sarrainodu____Allu_Arjun_,_Rakul_Preet,_Catherine_Tresa(0).mp4')">
+    <img src="./prabhas_img/varsham1.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./allu_arjun/Seethakaalam__Full_VideoSong__S_o_Satyamurthy__Allu_Arjun,_DSP___Allu_Arjun_DSP__Hits___Aditya_Music(0).mp4')">
+    <img src="./prabhas_img/mirchi1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/SEETI_MAAR_Full_Video_Song____DJ_Duvvada_Jagannadham____AlluArjun_DSP_Hits____Party_Songs_Telugu(0).mp4')">
+    <img src="./prabhas_img/mirchi2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Super_Machi_Full_Song___S_o_Satyamurthy_Full_Video_Song_-_Allu_Arjun,_Upendra,_Sneha(0).mp4')">
+    <img src="./prabhas_img/varsham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Sweety_Sweety_Video_Song__Race_Gurram_Video_Songs___Allu_Arjun,_Shruti_hassan_S.S_Thaman(0).mp4')">
+    <img src="./prabhas_img/bhahubali2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./allu_arjun/Telusa_Telusa_Video_Song___Sarrainodu_Video_Songs___Allu_Arjun,Rakul_Preet___SS_Thaman__Telugu_Songs(0).mp4')">
+    <img src="./prabhas_img/rebal.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./You_Are_My_MLA_Full_Video_Song_____Sarrainodu_____Allu_Arjun,_Rakul_Preet____Telugu_Songs_2016(0).mp4')">
+
+</div>
+
+<!-- JavaScript to handle video playback -->
+<script>
+function playVideo(videoFile) {
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Clear existing sources
+    videoPlayer.innerHTML = '';
+
+    // Create a new source element
+    const source = document.createElement('source');
+    source.src = videoFile;
+    source.type = 'video/mp4';
+    videoPlayer.appendChild(source);
+
+    // Load and play video
+    videoPlayer.load();
+    videoPlayer.play().catch(error => {
+        console.error("Autoplay failed: ", error);
+        alert("Click the play button to start the video.");
+    });
+
+    // Show video container
+    videoContainer.style.display = 'block';
+
+    // Scroll smoothly to the video container, just below the header
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const videoPosition = videoContainer.offsetTop - headerHeight;
+    window.scrollTo({ top: videoPosition, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

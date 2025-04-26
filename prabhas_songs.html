@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Play on Image Click</title>
+    <style>
+        /* Header Styling */
+        header {
+            height: 100px;
+            background-color: #8a42b8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            border-color: #cea6e6;
+            border-style: solid;
+            border-width: 10px;
+        }
+
+        /* Body Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 120px; /* Ensure content starts below the header */
+        }
+
+        /* Video Container */
+        #videoContainer {
+            display: none;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        video {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        }
+    
+
+        /* Thumbnail Styling */
+        .video-thumbnail {
+            cursor: pointer;
+            width: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .video-thumbnail:hover {
+            transform: scale(1.1);
+        }
+        #kes{
+            height: 50px;
+            border-radius: 15px;
+        }
+        #Home{
+            position: relative;
+            left:-500px;
+            text-decoration: none;
+            color: aliceblue;
+            font-size: 30PX;
+        }
+        /* Centered Text Animation */
+.intro {
+    opacity: 0;
+    transform: scale(0.5);
+    text-align: center;
+    animation: fadeInScale 1.5s ease-out forwards;
+}
+
+/* Glowing Text Effect */
+.intro h1 {
+    color: white;
+    font-size: 2.5em;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+    letter-spacing: 3px;
+    display: inline-block;
+    opacity: 0;
+}
+
+/* Keyframes for Smooth Fade-In Scaling */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+    <a id="Home" href="main1.html">&#x1F3E0;Home</a>
+    <img id="kes" src="ligo3.jpg">
+    𝕍𝓲𝓫𝓮𝕍𝒾𝓼𝒾𝑜𝓃
+</header>
+<div class="intro">
+
+<!-- Video Player Container -->
+<div id="videoContainer">
+    <video id="videoPlayer" controls>
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<!-- Video Thumbnails -->
+<div>
+    <img src="./prabhas_img/ammarpet.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Ammerpet_Full_Video_Song_HD_l_Eeswar_Movie_l_Prabhas,_Sridevi___Monu_Music(1080p).mp4')">
+    <img src="./prabhas_img/adavi ramudu.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./prabhas/Aaresuko_Boi___Adavi_Ramudu___Telugu_Film_Song(720p).mp4')">
+    <img src="./prabhas_img/bhahubali.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('.prabhas/Baahubali_2_Video_Songs_Telugu___Hamsa_Naava_Full_Video_Song___Prabhas,Anushka_Baahubali_Video_Songs(1080p).mp4')">
+    <img src="./prabhas_img/darling.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Darling_-_Inka_Edho_Video___Prabhas___G.V._Prakash_Kumar(1080p).mp4')">
+    <img src="./prabhas_img/darling2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Darling_-_Neeve_Video___Prabhas___G.V._Prakash_Kumar(1080p).mp4')">
+    <img src="./prabhas_img/darlilng3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Darling_-_Pranama_Video___Prabhas___G.V._Prakash_Kumar(1080p).mp4')">
+    <img src="./prabhas_img/ee_rathaley.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Full_Video__Ee_Raathale_Song___Radhe_Shyam___#Prabhas_#PoojaHegde___Justin_Prabhakaran___Krishna_K(1080p).mp4')">
+    <img src="./prabhas_img/radhey sham.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Full_Video__Nagumomu_Thaarale_Song___Radhe_Shyam___Prabhas,Pooja_H__Justin_Prabhakaran___Krishna_K(1080p).mp4')">
+    <img src="./prabhas_img/radhey sham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Full_Video__Ninnele_Song___Radhe_Shyam___Prabhas,Pooja_Hegde___Justin_Prabhakaran___Krishna_K(1080p).mp4')">
+    <img src="./prabhas_img/varsham1.jpg" alt="Video 2" class="video-thumbnail" onclick="playVideo('./prabhas/Kopama_Napaina_video_Song___Varsham_Movie_Songs____Devi_Sri_Prasad____Prabhas___Trisha____YOYO_Music(1080p).mp4')">
+    <img src="./prabhas_img/mirchi1.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Mirchi_Songs___Barbie_Girl_Video_Song___Latest_Telugu_Video_Songs___Prabhas,_Richa(1080p).mp4')">
+    <img src="./prabhas_img/mirchi2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Mirchi_Songs___Idedo_Bagundi_Video_Song___Latest_Telugu_Songs___Prabhas,_Anushka_@SriBalajiMovies(1080p).mp4')">
+    <img src="./prabhas_img/varsham2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Nacchave_Nizam_Pori_Full_Video_Song____Varsham_Movie____Prabhas,_Trisha,_Movie_Time_Cinema(720p).mp4')">
+    <img src="./prabhas_img/bhahubali2.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Pacha_Bottasi_Full_Video_Song____Baahubali__Telugu_____Prabhas,_Rana,_Anushka,_Tamannaah____Bahubali(1080p).mp4')">
+    <img src="./prabhas_img/rebal.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Rebel_Songs___Deepali_Full_Video_Song___Prabhas,_Deeksha_Seth___Latest_Telugu_Superhits(1080p).mp4')">
+    <img src="./prabhas_img/sa.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Sa_Re_Ga_Ma_Telugu_Video_Song___Raghavendra_Telugu_Movie_Video_Songs___Prabhas___Shweta_Agarwal(1080p).mp4')">
+    <img src="./prabhas_img/bhahubali3.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Sivuni_Aana_Full_Video_Song____Baahubali__Telugu_____Prabhas,_Rana,_Anushka,_Tamannaah____Bahubali(1080p).mp4')">
+    <img src="./prabhas_img/kalki.jpg" alt="Video 1" class="video-thumbnail" onclick="playVideo('./prabhas/Ta_Takkara__Telugu__-_Video Song___Kalki_2898_AD___Prabhas___Disha_Patani___Santhosh_Narayanan(1080p).mp4')">
+
+</div>
+</div>
+
+<!-- JavaScript to handle video playback -->
+<script>
+function playVideo(videoFile) {
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+
+    // Clear existing sources
+    videoPlayer.innerHTML = '';
+
+    // Create a new source element
+    const source = document.createElement('source');
+    source.src = videoFile;
+    source.type = 'video/mp4';
+    videoPlayer.appendChild(source);
+
+    // Load and play video
+    videoPlayer.load();
+    videoPlayer.play().catch(error => {
+        console.error("Autoplay failed: ", error);
+        alert("Click the play button to start the video.");
+    });
+
+    // Show video container
+    videoContainer.style.display = 'block';
+
+    // Scroll smoothly to the video container, just below the header
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const videoPosition = videoContainer.offsetTop - headerHeight;
+    window.scrollTo({ top: videoPosition, behavior: 'smooth' });
+    document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        const intro = document.querySelector(".intro");
+        if (intro) {
+            intro.style.animation = "fadeInScale 1.5s ease-out forwards";
+        }
+
+        // Letter-by-letter animation
+        const text = document.getElementById("welcome-text");
+        if (text) {
+            const words = text.innerText.split("");
+            text.innerText = "";
+
+            words.forEach((letter, index) => {
+                setTimeout(() => {
+                    text.innerHTML += letter;
+                    text.style.opacity = 1;
+                }, index * 100); // Adjust speed of letter appearance
+            });
+        }
+
+    }, 500); // Delay before effects start
+});
+
+}
+</script>
+
+</body>
+</html>

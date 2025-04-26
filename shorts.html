@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vibe vision Shorts Feed</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      background: #111;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    #shortsContainer {
+      margin-top: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .short {
+      width: 100%;
+      max-width: 400px;
+      aspect-ratio: 9/16;
+      position: relative;
+      background-color: #222;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .short iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .title {
+      padding: 8px;
+      font-size: 14px;
+      text-align: center;
+      color: #ccc;
+    }
+
+    .loading {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>🎬vibe vision Shorts</header>
+
+<div class="loading" id="loadingText">Loading Shorts...</div>
+<div id="shortsContainer"></div>
+
+<script>
+  const apiKey = 'AIzaSyBc4lojkKUcLDZluvsGIeCU5C4SAZWNiZY'; // Replace with your API key
+  const query = 'shorts';
+  const maxResults = 30; // Fetch 30 shorts
+
+  async function fetchShorts() {
+    const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&type=video&videoEmbeddable=true&videoDuration=short&maxResults=${maxResults}&q=${encodeURIComponent(query)}&key=${apiKey}`);
+    const data = await response.json();
+
+    const container = document.getElementById('shortsContainer');
+    container.innerHTML = '';
+    document.getElementById('loadingText').style.display = 'none'; // Hide loading text
+
+    for (const item of data.items) {
+      const videoId = item.id.videoId;
+      if (videoId) {
+        const isPlayable = await checkVideoPlayable(videoId);
+        if (isPlayable) {
+          const title = item.snippet.title;
+
+          const short = document.createElement('div');
+          short.className = 'short';
+          short.innerHTML = `
+            <iframe 
+              src="https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}" 
+              allow="autoplay; encrypted-media"
+              allowfullscreen>
+            </iframe>
+            <div class="title">${title}</div>
+          `;
+          container.appendChild(short);
+        }
+      }
+    }
+  }
+
+  async function checkVideoPlayable(videoId) {
+    try {
+      const response = await fetch(`https://www.googleapis.com/youtube/v3/videos?part=status&id=${videoId}&key=${apiKey}`);
+      const data = await response.json();
+      if (data.items.length > 0) {
+        const status = data.items[0].status;
+        // Check if the video is embeddable and public
+        return status.embeddable && status.privacyStatus === 'public';
+      }
+      return false;
+    } catch (error) {
+      console.error('Error checking video status:', error);
+      return false;
+    }
+  }
+
+  fetchShorts();
+</script>
+
+</body>
+</html>
